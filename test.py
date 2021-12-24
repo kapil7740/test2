@@ -62,12 +62,7 @@ async def Entry():
     my_cursor.execute(''' Select * FROM kkkk ''')
     x=my_cursor.fetchall()
     print(x)
-    return {
-        "id":Data_entity.id,
-        "name":Data_entity.name,
-        "salary":Data_entity.salary
-
-    }
+    return x
 
 if __name__=="__main__":
     uvicorn.run(app)
